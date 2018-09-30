@@ -24,7 +24,7 @@ def color_distance(c1, c2):
     return ((2 + r/256) * R**2 + 4 * G**2 + (2 + (255-r)/256)*B**2)**0.5
 
 def average_radius(image, x, y, radius):
-    return image[y-radius//2:y+radius//2, x-radius//2:x+radius//2].mean(axis=0)
+    return image[y-radius//2:y+radius//2, x-radius//2:x+radius//2].mean()
 
 def average_refcolor(image, xywh, ref_image, ref_color, dist_func, sensibility):
     x, y, w, h = xywh
